@@ -1,7 +1,7 @@
-import image from 'assets/222.png';
 import github from 'assets/github.png';
 import insta from 'assets/insta.png';
 import linkedin from 'assets/linkedin.png';
+import image from 'assets/myPhoto.png';
 import { Button } from 'shared/Button/Button';
 import { Wrapper } from '../Wrapper/Wrapper';
 import { MainHeader } from './MainHeader';
