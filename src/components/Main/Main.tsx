@@ -1,4 +1,4 @@
-import image from '../../assets/222.png';
+import image from 'assets/222.png';
 import github from 'assets/github.png';
 import insta from 'assets/insta.png';
 import linkedin from 'assets/linkedin.png';
