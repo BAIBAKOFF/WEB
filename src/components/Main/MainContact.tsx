@@ -15,7 +15,7 @@ export const MainContact = ({ contactRef }: Props) => {
             data-aos="zoom-out-right"
             required
             type="text"
-            placeholder="Enter your name*"
+            placeholder="Enter your name*123"
           />
           <input
             data-aos="zoom-out-left"
