@@ -13,9 +13,13 @@ import { Wrapper } from '../Wrapper/Wrapper';
 
 type Props = {
   projectsRef: React.RefObject<HTMLDivElement>;
+  setIsModalOpen: () => void;
 };
 
-export const MainProjects = ({ projectsRef }: Props) => {
+export const MainProjects = ({
+  projectsRef,
+  setIsModalOpen,
+}: Props) => {
   return (
     <Wrapper>
       <div
@@ -61,10 +65,7 @@ export const MainProjects = ({ projectsRef }: Props) => {
               <h1>DISCORD BOT</h1>
               <p>Bot for user interaction</p>
               <div className="project__buttons">
-                <Button
-                  href="https://drive.google.com/drive/folders/1ueNG2rjVzKSVerIt-FP0zb0zHo3y2fec"
-                  text="VIEW"
-                />
+                <Button onClick={setIsModalOpen} text="VIEW" />
               </div>
             </div>
           </div>

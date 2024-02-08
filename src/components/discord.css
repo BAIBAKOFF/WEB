@@ -1,0 +1,51 @@
+.discord {
+  margin: 0 auto;
+}
+
+.discord button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.discord-content {
+}
+
+.discord-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.discord-content video {
+  width: 70%;
+  height: 50%;
+}
+
+.discord-content p {
+  font-size: 100%;
+  margin-bottom: 70px;
+}
+
+.discord-content p span {
+  font-weight: 700;
+}
+
+@media (max-width: 1440px) {
+  .discord-content {
+    display: block;
+  }
+
+  .discord-content p {
+    font-size: 80%;
+  }
+
+  .discord-content video {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 45%;
+  }
+}

@@ -13,7 +13,9 @@ import { MainExperience } from './MainExperience';
 import { MainProjects } from './MainProjects';
 
 import AOS from 'aos';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import { Discord } from '../Discord';
+import { ModalWindow } from '../ModalWindow/ModalWindow';
 import { AboutMe } from './AboutMe';
 import { Aos } from './AosSettings';
 AOS.init(Aos);
@@ -30,8 +32,24 @@ export const Main = () => {
     }
   };
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.body.style.overflow = 'auto';
+  };
+
   return (
     <>
+      {isModalOpen && (
+        <ModalWindow>
+          <Discord closeModal={closeModal} />
+        </ModalWindow>
+      )}
       <Wrapper>
         <MainHeader
           main={() => executeScroll(mainRef)}
@@ -87,7 +105,10 @@ export const Main = () => {
         </div>
       </Wrapper>
       <AboutMe aboutMeRef={aboutMeRef} />
-      <MainProjects projectsRef={projectsRef} />
+      <MainProjects
+        projectsRef={projectsRef}
+        setIsModalOpen={openModal}
+      />
       <MainExperience />
       <MainContact contactRef={contactRef} />
       <Wrapper>
