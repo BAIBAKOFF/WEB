@@ -1,11 +1,11 @@
 import coding from '../../assets/codingImg.jpg';
-import stack1 from '../../assets/stack/image 138.png';
-import stack2 from '../../assets/stack/image 139.png';
-import stack3 from '../../assets/stack/image 140.png';
-import stack4 from '../../assets/stack/image 141.png';
-import stack5 from '../../assets/stack/image 142.png';
-import stack6 from '../../assets/stack/image 143.png';
-import stack7 from '../../assets/stack/image 144.png';
+import stack1 from '../../assets/image 138.png';
+import stack2 from '../../assets/image 139.png';
+import stack3 from '../../assets/image 140.png';
+import stack4 from '../../assets/image 141.png';
+import stack5 from '../../assets/image 142.png';
+import stack6 from '../../assets/image 143.png';
+import stack7 from '../../assets/image 144.png';
 import { Wrapper } from '../Wrapper/Wrapper';
 
 export const MainExperience = () => {
