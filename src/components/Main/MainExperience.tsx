@@ -12,9 +12,8 @@ export const MainExperience = () => {
   return (
     <div className="experience">
       <Wrapper>
-        <div  className="experience-content">
-          <div data-aos="fade-up"
-               data-aos-duration="1000" >
+        <div className="experience-content">
+          <div data-aos="fade-up" data-aos-duration="1000">
             <ul>
               <li>
                 Strong understanding of HTML - block and semantic
@@ -41,13 +40,17 @@ export const MainExperience = () => {
               <li>Solid knowledge of React</li>
             </ul>
           </div>
-          <img data-aos="fade-up"
-               data-aos-duration="1000" src={coding} width={100} alt="/" />
+          <img
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            src={coding}
+            width={100}
+            alt="/"
+          />
         </div>
-        <div  className="experience-skills">
+        <div className="experience-skills">
           <h1>MY SKILLS</h1>
-          <div data-aos="fade-up"
-               data-aos-duration="1000">
+          <div data-aos="fade-up" data-aos-duration="1000">
             <img src={stack4} width={100} alt="" />
             <img src={stack1} width={100} alt="" />
             <img src={stack2} width={100} alt="" />

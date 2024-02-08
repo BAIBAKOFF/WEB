@@ -10,7 +10,7 @@
   gap: 20px;
 }
 
-.header-list li a {
+.header-list li a, button {
   transition: 0.3s;
   font-weight: 600;
   font-size: 1rem;

@@ -2,58 +2,46 @@ import image from 'assets/222.png';
 import github from 'assets/github.png';
 import insta from 'assets/insta.png';
 import linkedin from 'assets/linkedin.png';
-import myPhoto from 'assets/myPhoto2.jpg';
 import { Button } from 'shared/Button/Button';
 import { Wrapper } from '../Wrapper/Wrapper';
 import { MainHeader } from './MainHeader';
 import './main.css';
 
-import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { MainContact } from './MainContact';
 import { MainExperience } from './MainExperience';
 import { MainProjects } from './MainProjects';
-import {MainContact} from "./MainContact";
-import {useRef} from "react";
 
-AOS.init({
-  // Global settings:
-  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-  initClassName: 'aos-init', // class applied after initialization
-  animatedClassName: 'aos-animate', // class applied on animation
-  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // offset (in px) from the original trigger point
-  delay: 200, // values from 0 to 3000, with step 50ms
-  duration: 200, // values from 0 to 3000, with step 50ms
-  easing: 'ease', // default easing for AOS animations
-  once: false, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom',
-});
+import AOS from 'aos';
+import { AboutMe } from './AboutMe';
+import { Aos } from './AosSettings';
+import React, {useRef} from "react";
+AOS.init(Aos);
 
 export const Main = () => {
 
-    const myBlockRef = useRef<HTMLDivElement>(null);
+  const mainRef = useRef<HTMLDivElement>(null);
+  const aboutMeRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
-    const scrollToBlock = () => {
-      if (myBlockRef.current) {
-        myBlockRef.current.scrollIntoView({behavior: 'smooth'});
-      }
-    };
+  const executeScroll = (ref: React.RefObject<HTMLDivElement>) => {
+    if (ref.current) {
+      ref.current.scrollIntoView();
+    }
+  };
 
   return (
     <>
       <Wrapper>
-        <MainHeader scrollToBlock={scrollToBlock}/>
-        <div className="main-content">
-          <div data-aos="fade-right"
-               data-aos-offset="300"
-               data-aos-easing="ease-in-sine" className="main-title">
+        <MainHeader main={() => executeScroll(mainRef)} aboutMe={() => executeScroll(aboutMeRef)} projectsRef={() => executeScroll(projectsRef)} contactRef={() => executeScroll(contactRef)}/>
+        <div ref={mainRef} className="main-content">
+          <div
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            className="main-title"
+          >
             <p>
               <span>Hello!</span> <br />
               My name is <span>SERGEI BAIBAKOV</span> <br />
@@ -83,48 +71,21 @@ export const Main = () => {
               />
             </div>
           </div>
-          <div data-aos="fade-left"
-               data-aos-anchor="#example-anchor"
-               data-aos-offset="500"
-               data-aos-duration="500" className="main-img">
+          <div
+            data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="500"
+            className="main-img"
+          >
             <img src={image} alt="/" />
           </div>
         </div>
       </Wrapper>
-      <div className="aboutMe">
-        <Wrapper>
-          <div data-aos="fade-up"
-               data-aos-duration="1000" className="aboutMe-content">
-            <img src={myPhoto} alt="/" />
-            <div>
-              <h1>
-                About <span>Me!</span>
-              </h1>
-              <h3>Frontend Developer!</h3>
-              <p>
-                I am a Frontend developer experienced in{' '}
-                <span>
-                  HTML, CSS, JavaScript, React, Node.js, and GraphQL
-                </span>
-                .
-                <br />I work at Vespia, a company specializing in
-                Anti-Money Laundering (AML) checks. Alongside my
-                primary role, I am actively involved in developing an
-                administrative panel for the gaming community Squad.
-                This project involves collaboration with a backend
-                developer to facilitate player interaction on gaming
-                servers, aiming to create an intuitive and functional
-                interface. Additionally, I have directly interacted
-                with databases using <span>MySQL</span> and
-                <span>GraphQL</span>.
-              </p>
-            </div>
-          </div>
-        </Wrapper>
-      </div>
-      <MainProjects />
+      <AboutMe aboutMeRef={aboutMeRef} />
+      <MainProjects projectsRef={projectsRef}/>
       <MainExperience />
-      <MainContact ref={myBlockRef}/>
+      <MainContact contactRef={contactRef} />
       <Wrapper>
         <footer className="footer">
           <p>2024 By Sergei Baibakov</p>

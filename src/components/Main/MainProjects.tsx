@@ -9,19 +9,32 @@ import game7 from '../../assets/games/webBank.png';
 import game8 from '../../assets/games/website.png';
 import { Button } from '../../shared/Button/Button';
 import { Wrapper } from '../Wrapper/Wrapper';
+import React from "react";
 
-export const MainProjects = () => {
+
+type Props = {
+  projectsRef: React.RefObject<HTMLDivElement>
+}
+
+export const MainProjects = ({projectsRef}: Props) => {
   return (
     <Wrapper>
-      <div data-aos="fade-up"
-           data-aos-duration="1000" className="projects">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="projects"
+        ref={projectsRef}
+      >
         <h1>
           My <span>projects</span>
         </h1>
         <div className="projects-content">
-          <div data-aos="flip-left"
-               data-aos-easing="ease-out-cubic"
-               data-aos-duration="2000" className="project">
+          <div
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+            className="project"
+          >
             <img src={game1} alt="" />
             <div className="test">
               <h1>GAME PINK</h1>
@@ -38,9 +51,12 @@ export const MainProjects = () => {
               </div>
             </div>
           </div>
-          <div data-aos="flip-left"
-               data-aos-easing="ease-out-cubic"
-               data-aos-duration="2000" className="project">
+          <div
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+            className="project"
+          >
             <img src={game2} alt="" />
             <div className="test">
               <h1>DISCORD BOT</h1>
@@ -53,9 +69,12 @@ export const MainProjects = () => {
               </div>
             </div>
           </div>
-          <div data-aos="flip-left"
-               data-aos-easing="ease-out-cubic"
-               data-aos-duration="2000" className="project">
+          <div
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+            className="project"
+          >
             <img src={game3} alt="" />
             <div className="test">
               <h1>Cardio application</h1>
@@ -72,9 +91,12 @@ export const MainProjects = () => {
               </div>
             </div>
           </div>
-          <div data-aos="flip-left"
-               data-aos-easing="ease-out-cubic"
-               data-aos-duration="2000" className="project">
+          <div
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+            className="project"
+          >
             <img src={game4} alt="" />
             <div className="test">
               <h1>Guess the number</h1>
@@ -91,9 +113,12 @@ export const MainProjects = () => {
               </div>
             </div>
           </div>
-          <div data-aos="flip-left"
-               data-aos-easing="ease-out-cubic"
-               data-aos-duration="2000" className="project">
+          <div
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+            className="project"
+          >
             <img src={game6} alt="" />
             <div className="test">
               <h1>React D3 Tree </h1>
@@ -110,9 +135,12 @@ export const MainProjects = () => {
               </div>
             </div>
           </div>
-          <div data-aos="flip-left"
-               data-aos-easing="ease-out-cubic"
-               data-aos-duration="2000" className="project">
+          <div
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+            className="project"
+          >
             <img src={game7} alt="" />
             <div className="test">
               <h1>Bank Website</h1>
@@ -131,9 +159,12 @@ export const MainProjects = () => {
               </div>
             </div>
           </div>
-          <div data-aos="flip-left"
-               data-aos-easing="ease-out-cubic"
-               data-aos-duration="2000" className="project">
+          <div
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+            className="project"
+          >
             <img src={game8} alt="" />
             <div className="test">
               <h1>My Website</h1>
@@ -152,9 +183,12 @@ export const MainProjects = () => {
               </div>
             </div>
           </div>
-          <div data-aos="flip-left"
-               data-aos-easing="ease-out-cubic"
-               data-aos-duration="2000" className="project">
+          <div
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+            className="project"
+          >
             <img src={game5} alt="" />
             <div className="test">
               <h1>Daily expenses</h1>
@@ -171,9 +205,12 @@ export const MainProjects = () => {
               </div>
             </div>
           </div>
-          <div data-aos="flip-left"
-               data-aos-easing="ease-out-cubic"
-               data-aos-duration="2000" className="project">
+          <div
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+            className="project"
+          >
             <img src={adminPanel} alt="" />
             <div className="test">
               <h1>Admin Panel</h1>

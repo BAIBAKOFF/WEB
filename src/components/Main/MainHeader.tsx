@@ -1,29 +1,31 @@
-import {MouseEventHandler} from "react";
 
 type Props = {
-  scrollToBlock: MouseEventHandler | undefined;
+  main: () => void;
+  aboutMe: () => void;
+  projectsRef: () => void;
+  contactRef: () => void;
 }
 
-export const MainHeader = ({scrollToBlock}: Props) => {
+export const MainHeader = ({main, aboutMe, projectsRef, contactRef}:Props ) => {
   return (
     <header className="header">
       <h1>BAIBAKOV</h1>
       <div>
         <ul className="header-list">
           <li>
-            <a href="/">HOME</a>
+            <button onClick={main}>HOME</button>
           </li>
           <li>
-            <a href="/">ABOUT ME</a>
+            <button onClick={aboutMe}>ABOUT ME</button>
           </li>
           <li>
-            <a href="/">MY PROJECTS</a>
+            <button onClick={projectsRef}>MY PROJECTS</button>
           </li>
           <li>
-            <a href="/">LINKEDIN</a>
+            <a target="_blank" href="https://www.linkedin.com/in/sergei-baibakov-5b8b44265/">LINKEDIN</a>
           </li>
           <li>
-            <button onClick={scrollToBlock}>CONTACT</button>
+            <button onClick={contactRef}>CONTACT</button>
           </li>
         </ul>
       </div>

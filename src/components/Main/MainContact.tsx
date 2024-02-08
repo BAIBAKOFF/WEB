@@ -1,13 +1,13 @@
-import {Button} from "../../shared/Button/Button";
-import {LegacyRef} from "react";
+import { Button } from '../../shared/Button/Button';
+import React from "react";
 
 type Props = {
-  ref: LegacyRef<any> | undefined;
+  contactRef: React.RefObject<HTMLDivElement>
 }
 
-export const MainContact = ({ref}: Props) => {
+export const MainContact = ({contactRef}: Props) => {
   return (
-    <div ref={ref} className="contact">
+    <div ref={contactRef} className="contact">
       <div className="contact__inputs">
         <h1>CONTACT</h1>
         <div className="contact__input">
@@ -34,5 +34,5 @@ export const MainContact = ({ref}: Props) => {
       </div>
       <Button text="Sumbit" />
     </div>
-  )
-}
+  );
+};
