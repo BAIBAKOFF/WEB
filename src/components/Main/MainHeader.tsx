@@ -1,12 +1,16 @@
-
 type Props = {
   main: () => void;
   aboutMe: () => void;
   projectsRef: () => void;
   contactRef: () => void;
-}
+};
 
-export const MainHeader = ({main, aboutMe, projectsRef, contactRef}:Props ) => {
+export const MainHeader = ({
+  main,
+  aboutMe,
+  projectsRef,
+  contactRef,
+}: Props) => {
   return (
     <header className="header">
       <h1>BAIBAKOV</h1>
@@ -22,7 +26,12 @@ export const MainHeader = ({main, aboutMe, projectsRef, contactRef}:Props ) => {
             <button onClick={projectsRef}>MY PROJECTS</button>
           </li>
           <li>
-            <a target="_blank" href="https://www.linkedin.com/in/sergei-baibakov-5b8b44265/">LINKEDIN</a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/sergei-baibakov-5b8b44265/"
+            >
+              LINKEDIN
+            </a>
           </li>
           <li>
             <button onClick={contactRef}>CONTACT</button>

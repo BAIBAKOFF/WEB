@@ -1,3 +1,4 @@
+import React from 'react';
 import adminPanel from '../../assets/adminPanel.png';
 import game3 from '../../assets/games/application_cardio.jpg';
 import game2 from '../../assets/games/discordBot.jpeg';
@@ -9,14 +10,12 @@ import game7 from '../../assets/games/webBank.png';
 import game8 from '../../assets/games/website.png';
 import { Button } from '../../shared/Button/Button';
 import { Wrapper } from '../Wrapper/Wrapper';
-import React from "react";
-
 
 type Props = {
-  projectsRef: React.RefObject<HTMLDivElement>
-}
+  projectsRef: React.RefObject<HTMLDivElement>;
+};
 
-export const MainProjects = ({projectsRef}: Props) => {
+export const MainProjects = ({ projectsRef }: Props) => {
   return (
     <Wrapper>
       <div

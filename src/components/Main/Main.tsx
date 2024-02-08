@@ -13,13 +13,12 @@ import { MainExperience } from './MainExperience';
 import { MainProjects } from './MainProjects';
 
 import AOS from 'aos';
+import React, { useRef } from 'react';
 import { AboutMe } from './AboutMe';
 import { Aos } from './AosSettings';
-import React, {useRef} from "react";
 AOS.init(Aos);
 
 export const Main = () => {
-
   const mainRef = useRef<HTMLDivElement>(null);
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -34,7 +33,12 @@ export const Main = () => {
   return (
     <>
       <Wrapper>
-        <MainHeader main={() => executeScroll(mainRef)} aboutMe={() => executeScroll(aboutMeRef)} projectsRef={() => executeScroll(projectsRef)} contactRef={() => executeScroll(contactRef)}/>
+        <MainHeader
+          main={() => executeScroll(mainRef)}
+          aboutMe={() => executeScroll(aboutMeRef)}
+          projectsRef={() => executeScroll(projectsRef)}
+          contactRef={() => executeScroll(contactRef)}
+        />
         <div ref={mainRef} className="main-content">
           <div
             data-aos="fade-right"
@@ -83,7 +87,7 @@ export const Main = () => {
         </div>
       </Wrapper>
       <AboutMe aboutMeRef={aboutMeRef} />
-      <MainProjects projectsRef={projectsRef}/>
+      <MainProjects projectsRef={projectsRef} />
       <MainExperience />
       <MainContact contactRef={contactRef} />
       <Wrapper>

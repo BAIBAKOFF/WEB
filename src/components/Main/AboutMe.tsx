@@ -1,12 +1,12 @@
+import React from 'react';
 import myPhoto from '../../assets/myPhoto2.jpg';
 import { Wrapper } from '../Wrapper/Wrapper';
-import React from "react";
 
 type Props = {
-  aboutMeRef: React.RefObject<HTMLDivElement>
-}
+  aboutMeRef: React.RefObject<HTMLDivElement>;
+};
 
-export const AboutMe = ({aboutMeRef}: Props) => {
+export const AboutMe = ({ aboutMeRef }: Props) => {
   return (
     <div ref={aboutMeRef} className="aboutMe">
       <Wrapper>

@@ -1,11 +1,11 @@
+import React from 'react';
 import { Button } from '../../shared/Button/Button';
-import React from "react";
 
 type Props = {
-  contactRef: React.RefObject<HTMLDivElement>
-}
+  contactRef: React.RefObject<HTMLDivElement>;
+};
 
-export const MainContact = ({contactRef}: Props) => {
+export const MainContact = ({ contactRef }: Props) => {
   return (
     <div ref={contactRef} className="contact">
       <div className="contact__inputs">
