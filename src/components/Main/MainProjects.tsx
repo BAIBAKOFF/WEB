@@ -8,7 +8,7 @@ import game6 from 'assets/games/tree.png';
 import game7 from 'assets/games/webBank.png';
 import game8 from 'assets/games/website.png';
 import React from 'react';
-import { Button } from '../../shared/Button/Button';
+import { Button } from 'shared/Button/Button';
 import { Wrapper } from '../Wrapper/Wrapper';
 
 type Props = {
