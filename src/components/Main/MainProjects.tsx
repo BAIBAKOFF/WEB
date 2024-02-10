@@ -2,7 +2,7 @@ import adminPanel from 'assets/adminPanel.png';
 import game3 from 'assets/applicationCardio.jpg';
 import game2 from 'assets/discordBot.jpeg';
 import game4 from 'assets/gameNumber.png';
-import game1 from 'assets/gameSvin.png';
+import game1 from 'assets/gameSvin.337.png';
 import game5 from 'assets/reactApplication.jpg';
 import game6 from 'assets/tree.png';
 import game7 from 'assets/webBank.png';
